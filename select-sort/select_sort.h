@@ -2,7 +2,7 @@
 #define _SELECT_SORT_H_
 
 template <typename _Key>
-void SelectionSort(_Key arr[], int len) {
+void select_sort(_Key arr[], int len) {
 	int min_index = 0;
 	for (int i = 0; i < len; ++i) {
 		min_index = i;
@@ -16,7 +16,7 @@ void SelectionSort(_Key arr[], int len) {
 }
 
 template <typename _Key, typename _Compare>
-void SelectionSort(_Key arr[], int len, _Compare key_comp) {
+void select_sort(_Key arr[], int len, _Compare key_comp) {
 	int min_index = 0;
 	for (int i = 0; i < len; ++i) {
 		min_index = i;

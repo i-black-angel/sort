@@ -4,7 +4,7 @@
 // Shell's sort
 // 希尔排序是基于插入排序的一种改进，也称之为增量插入排序算法
 template <typename _Key>
-void ShellSort(_Key arr[], int len) {
+void shell_sort(_Key arr[], int len) {
 	int i = 0, j = 0, gap = 0;
 	_Key temp;
 	// 初始步长 len/2, 并对步长取半直到 1
@@ -21,7 +21,7 @@ void ShellSort(_Key arr[], int len) {
 }
 
 template <typename _Key, typename _Compare>
-void ShellSort(_Key arr[], int len, _Compare key_comp) {
+void shell_sort(_Key arr[], int len, _Compare key_comp) {
 	int i = 0, j = 0, gap = 0;
 	_Key temp;
 	// 初始步长 len/2, 并对步长取半直到 1

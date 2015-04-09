@@ -2,7 +2,7 @@
 #define _INSERT_SORT_H_
 
 template <typename _Key>
-void InsertSort(_Key arr[], int len) {
+void insert_sort(_Key arr[], int len) {
 	int i = 0, j = 0;
 	_Key temp;
 	for (i = 1; i < len; ++i) {
@@ -15,7 +15,7 @@ void InsertSort(_Key arr[], int len) {
 
 
 template <typename _Key, typename _Compare>
-void InsertSort(_Key arr[], int len, _Compare key_comp) {
+void insert_sort(_Key arr[], int len, _Compare key_comp) {
 	int i = 0, j = 0;
 	_Key temp;
 	for (i = 1; i < len; ++i) {

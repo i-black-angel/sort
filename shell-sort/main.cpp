@@ -22,7 +22,7 @@ void sorting(int data[], int len) {
     struct timeval tstart, tend;
     gettimeofday(&tstart, NULL);
 
-	ShellSort(data, len);
+	shell_sort(data, len);
     
     gettimeofday(&tend, NULL);
     double timeuse = (tend.tv_sec - tstart.tv_sec) * 1000000

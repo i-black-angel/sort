@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	}
 	
 	// from less to large
-	// InsertSort(data, sizeof(data) / sizeof(data[0]));
+	// insert_sort(data, sizeof(data) / sizeof(data[0]));
 	// for (int i = 0; i < sizeof(data) / sizeof(data[0]); ++i) {
 	// 	cout << data[i] << " ";
 	// }
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 	clock_t start = clock();
 	// reverse sort
-	InsertSort(data, sizeof(data) / sizeof(data[0]), comp);
+	insert_sort(data, sizeof(data) / sizeof(data[0]), comp);
 	clock_t end = clock();
 	double usetime = (double)(end - start) / CLOCKS_PER_SEC;
 	cout << "use time: " << usetime << endl;
