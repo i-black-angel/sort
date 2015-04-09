@@ -2,7 +2,7 @@
 #include <sys/time.h>
 #include <cstdlib>
 #include <cstdio>
-#include "shell_sort.h"
+#include "merge_sort.h"
 
 using namespace std;
 
@@ -22,7 +22,7 @@ void sorting(int data[], int len) {
     struct timeval tstart, tend;
     gettimeofday(&tstart, NULL);
 
-	shell_sort(data, len);
+	merge_sort(data, len);
     
     gettimeofday(&tend, NULL);
     double timeuse = (tend.tv_sec - tstart.tv_sec) * 1000000

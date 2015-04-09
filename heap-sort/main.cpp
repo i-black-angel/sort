@@ -40,14 +40,17 @@ void sorting(int data[], int len) {
 int main(int argc, char *argv[])
 {
 	srand((unsigned int)time(NULL));
-	int data[20];
+	int data_small[80];
+	int data_mid[800];
+	int data[800000];
 
+	building(data_small, ELEMENTS(data_small));
+	building(data_mid, ELEMENTS(data_mid));
 	building(data, ELEMENTS(data));
+
+	sorting(data_small, ELEMENTS(data_small));
+	sorting(data_mid, ELEMENTS(data_mid));
 	sorting(data, ELEMENTS(data));
 
-	for (int i = 0; i < ELEMENTS(data); ++i) {
-		cout << data[i] << " ";
-	}
-	cout << endl;
     return 0;
 }
