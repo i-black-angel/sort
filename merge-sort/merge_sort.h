@@ -11,7 +11,10 @@ void merge(_Key arr[], _Key temp[], int low, int mid, int high) {
 		else if (begin2 > end2)
 			temp[k++] = arr[begin1++];
 		else {
-			if (arr[begin1] <= arr[begin2])
+			// if (arr[begin1] <= arr[begin2])
+			// 改写成下面的写法主要是要保持 merge 算法的稳定性
+			// 相等元素的顺序不改变
+			if ( !(arr[begin2] < arr[begin1]) )
 				temp[k++] = arr[begin1++];
 			else
 				temp[k++] = arr[begin2++];
@@ -35,7 +38,6 @@ void merge_pass(_Key a[], _Key b[], int seg, int len) {
 		}
 	}
 }
-
 
 template <typename _Key>
 void merge_sort(_Key arr[], int size) {
